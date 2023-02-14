@@ -36,12 +36,22 @@ def choose_wordle(filename):
         text = f.read()
         # remove leading and trailing punctuations
         # and skip words that contain non letters
+<<<<<<< HEAD
         words = [word.strip(string.punctuation) for word in text.split() if len(
         word.strip(string.punctuation)) == 5 and word.strip(
         string.punctuation).isalpha()]
 
     return random.choice(words).upper()
 
+=======
+        words = [word.strip(string.punctuation) for word in text.split()
+                 if len(word.strip(string.punctuation)) == 5 and
+                 word.strip(string.punctuation).isalpha()]
+
+    return random.choice(words).upper()
+
+
+>>>>>>> 2a6bd43 (added pep8 style)
 def check(wordle, guess):
     """
     Check the player's guess against the wordle and return a string
@@ -119,6 +129,10 @@ def prompt_guess():
 
     return guess.upper()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a6bd43 (added pep8 style)
 def play(wordle):
     """
     Implement the wordle game with all 6 attempts.
@@ -160,5 +174,9 @@ def main():
     if not play(wordle):
         print(DEFAULT + f'The correct answer is {wordle}')
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a6bd43 (added pep8 style)
 if __name__ == '__main__':
     main()
